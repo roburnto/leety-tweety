@@ -4,8 +4,9 @@ class Solution:
 
         for i in range(len(nums)):
             complement = target - nums[i]
-
+            
             if complement in index:
-                return [index[complement], i]
+                return [i,index[complement]]
             
             index[nums[i]] = i
+
