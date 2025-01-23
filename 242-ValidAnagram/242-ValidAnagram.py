@@ -1,15 +1,13 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if(len(s) != len(t)):
+        if len(s) != len(t):
             return False
-        count_s = {}
-        count_t = {}
 
-        for char in s:
-            count_s[char] = 1+ count_s.get(char,0)
-        for char in t:
-            count_t[char] = 1+ count_t.get(char,0)
+        freqs = [0]*26
+        freqt = [0]*26
+        for c in s:
+            freqs[ord(c)-ord('a')] +=1
+        for c in t:
+            freqt[ord(c)-ord('a')] +=1
 
-        return count_s == count_t
-         
-        
+        return freqs == freqt
