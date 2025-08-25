@@ -1,3 +1,4 @@
+# Last updated: 8/25/2025, 11:02:30 AM
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
